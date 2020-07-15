@@ -2,6 +2,10 @@
 import Database.FirmaDatabase;
 import Database.PersonelDatabase;
 import Database.ProjeDatabase;
+import Model.Ekipman;
+import Model.Firma;
+import Model.Personel;
+import Model.Proje;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -47,20 +51,27 @@ public class Ekran extends javax.swing.JFrame {
         jLabel80 = new javax.swing.JLabel();
         jTextFieldPersonelAd = new javax.swing.JTextField();
         jComboBoxLevel = new javax.swing.JComboBox<>();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButtonPersonelEkle = new javax.swing.JButton();
+        jButtonPersonelSil = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTablePersonel = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jTextFieldPersAd = new javax.swing.JTextField();
+        jTextFieldGuncellenecekAd = new javax.swing.JTextField();
+        jTextFieldLevel = new javax.swing.JTextField();
+        jButtonPersonelGuncelle = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxMusteri = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBoxTestYeri = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -295,8 +306,18 @@ public class Ekran extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTableProje);
 
         jButtonFirmaSil.setText("Sil");
+        jButtonFirmaSil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFirmaSilActionPerformed(evt);
+            }
+        });
 
         jButtonProjeSil.setText("Sil");
+        jButtonProjeSil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProjeSilActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -354,7 +375,7 @@ public class Ekran extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1123, Short.MAX_VALUE))
+                .addContainerGap(1133, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Firma ve Proje", jPanel1);
@@ -365,16 +386,19 @@ public class Ekran extends javax.swing.JFrame {
 
         jComboBoxLevel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
-        jButton3.setText("Ekle");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPersonelEkle.setText("Ekle");
+        jButtonPersonelEkle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonPersonelEkleActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Düzenle");
-
-        jButton5.setText("Sil");
+        jButtonPersonelSil.setText("Sil");
+        jButtonPersonelSil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPersonelSilActionPerformed(evt);
+            }
+        });
 
         jTablePersonel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -384,7 +408,7 @@ public class Ekran extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Personel Ad", "Personel Level"
             }
         ));
         jScrollPane3.setViewportView(jTablePersonel);
@@ -406,9 +430,8 @@ public class Ekran extends javax.swing.JFrame {
                             .addComponent(jComboBoxLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(66, 66, 66)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButtonPersonelSil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonPersonelEkle, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE))
                         .addGap(735, 735, 735))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
@@ -422,20 +445,75 @@ public class Ekran extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel77)
                     .addComponent(jTextFieldPersonelAd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                    .addComponent(jButtonPersonelEkle))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel80)
                     .addComponent(jComboBoxLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
-                .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addGap(35, 35, 35)
+                    .addComponent(jButtonPersonelSil))
+                .addGap(73, 73, 73)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1061, Short.MAX_VALUE))
+                .addContainerGap(1072, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Personel", jPanel3);
+
+        jLabel79.setText("Personel Ad");
+
+        jLabel81.setText("Güncellenecek Ad");
+
+        jLabel82.setText("Level");
+
+        jButtonPersonelGuncelle.setText("Güncelle");
+        jButtonPersonelGuncelle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPersonelGuncelleActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel79)
+                    .addComponent(jLabel81)
+                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldPersAd)
+                    .addComponent(jTextFieldGuncellenecekAd)
+                    .addComponent(jTextFieldLevel, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addComponent(jButtonPersonelGuncelle)
+                .addContainerGap(702, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel79)
+                            .addComponent(jTextFieldPersAd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel81)
+                            .addComponent(jTextFieldGuncellenecekAd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(jButtonPersonelGuncelle)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel82)
+                    .addComponent(jTextFieldLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1559, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Personel Düzenleme", jPanel2);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText(" GÖZETİM MUAYENE VE EĞİTİM HİZMETLERİ");
@@ -701,11 +779,11 @@ public class Ekran extends javax.swing.JFrame {
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addGap(58, 58, 58)
-                                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jComboBoxTestYeri, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jComboBoxMusteri, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -983,7 +1061,7 @@ public class Ekran extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxMusteri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13)
@@ -1000,7 +1078,7 @@ public class Ekran extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxTestYeri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel10)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel15)
@@ -1326,8 +1404,13 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
 
     private void jComboBoxEkipmanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEkipmanActionPerformed
         Object secilenEkipman = jComboBoxEkipman.getSelectedItem();
+        jComboBoxKutup.removeAllItems();
+        jComboBoxMP.removeAllItems();
+        jComboBoxMiknatislama.removeAllItems();
+        jComboBoxUV.removeAllItems();
+        jComboBoxİsikMesafe.removeAllItems();
         for (Ekipman ek : ekipmanlar) {
-            if (ek.equals(secilenEkipman)) {
+            if (ek.getEkipmanAd().equals(secilenEkipman)) {
                 for (String str : ek.getKutupMesafesi()) {
                     jComboBoxKutup.addItem(str);
                 }
@@ -1346,15 +1429,17 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
             }
         }
         DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
-        firmaDatabase.firmaGetir(model);
+        firmaDatabase.firmaGetir(model, firmaList);
     }//GEN-LAST:event_jComboBoxEkipmanActionPerformed
     FirmaDatabase firmaDatabase = new FirmaDatabase();
+    ArrayList<Firma> firmaList = new ArrayList<>();
     private void jButtonFirmaEkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFirmaEkleActionPerformed
 
         firmaDatabase.firmaEkle(jTextFieldFirmaAd.getText(), jTextFieldTestYeri.getText());
         JOptionPane.showMessageDialog(rootPane, "Firma başarıyla oluşturuldu!");
         DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
-        firmaDatabase.firmaGetir(model);
+        firmaDatabase.firmaGetir(model, firmaList);
+        
     }//GEN-LAST:event_jButtonFirmaEkleActionPerformed
     ProjeDatabase projeDatabase = new ProjeDatabase();
     private void jButtonProjeEkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProjeEkleActionPerformed
@@ -1363,11 +1448,36 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         projeDatabase.projeGetir(model);
     }//GEN-LAST:event_jButtonProjeEkleActionPerformed
     PersonelDatabase personelDatabase = new PersonelDatabase();
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonPersonelEkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonelEkleActionPerformed
         personelDatabase.personelEkle(jTextFieldPersonelAd.getText(), jComboBoxLevel.getSelectedItem().toString());
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
-        personelDatabase.projeGetir(model);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        personelDatabase.personelGetir(model);
+    }//GEN-LAST:event_jButtonPersonelEkleActionPerformed
+
+    private void jButtonFirmaSilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFirmaSilActionPerformed
+        firmaDatabase.firmaSil(jTextFieldFirmaAd.getText());
+        DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
+        firmaDatabase.firmaGetir(model, firmaList);
+        jComboBoxMusteri.removeItem(jTextFieldFirmaAd.getText());
+    }//GEN-LAST:event_jButtonFirmaSilActionPerformed
+
+    private void jButtonProjeSilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProjeSilActionPerformed
+        projeDatabase.projeSil(jTextFieldProjeAd.getText());
+        DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
+        projeDatabase.projeGetir(model);
+    }//GEN-LAST:event_jButtonProjeSilActionPerformed
+
+    private void jButtonPersonelSilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonelSilActionPerformed
+        personelDatabase.personelSil(jTextFieldPersonelAd.getText());
+        DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
+        personelDatabase.personelGetir(model);
+    }//GEN-LAST:event_jButtonPersonelSilActionPerformed
+
+    private void jButtonPersonelGuncelleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonelGuncelleActionPerformed
+        personelDatabase.personelGuncelle(jTextFieldPersAd.getText(), jTextFieldGuncellenecekAd.getText(), jTextFieldLevel.getText());
+        DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
+        personelDatabase.personelGetir(model);
+    }//GEN-LAST:event_jButtonPersonelGuncelleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1407,16 +1517,15 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonFirmaEkle;
     private javax.swing.JButton jButtonFirmaSil;
+    private javax.swing.JButton jButtonPersonelEkle;
+    private javax.swing.JButton jButtonPersonelGuncelle;
+    private javax.swing.JButton jButtonPersonelSil;
     private javax.swing.JButton jButtonProjeEkle;
     private javax.swing.JButton jButtonProjeSil;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
     private javax.swing.JComboBox<String> jComboBox12;
@@ -1437,13 +1546,14 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JComboBox<String> jComboBox26;
     private javax.swing.JComboBox<String> jComboBox27;
     private javax.swing.JComboBox<String> jComboBox28;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JComboBox<String> jComboBoxEkipman;
     private javax.swing.JComboBox<String> jComboBoxKutup;
     private javax.swing.JComboBox<String> jComboBoxLevel;
     private javax.swing.JComboBox<String> jComboBoxMP;
     private javax.swing.JComboBox<String> jComboBoxMiknatislama;
+    private javax.swing.JComboBox<String> jComboBoxMusteri;
+    private javax.swing.JComboBox<String> jComboBoxTestYeri;
     private javax.swing.JComboBox<String> jComboBoxUV;
     private javax.swing.JComboBox<String> jComboBoxİsikMesafe;
     private javax.swing.JLabel jLabel1;
@@ -1522,10 +1632,14 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
@@ -1619,6 +1733,9 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldFirmaAd;
+    private javax.swing.JTextField jTextFieldGuncellenecekAd;
+    private javax.swing.JTextField jTextFieldLevel;
+    private javax.swing.JTextField jTextFieldPersAd;
     private javax.swing.JTextField jTextFieldPersonelAd;
     private javax.swing.JTextField jTextFieldProjeAd;
     private javax.swing.JTextField jTextFieldTestYeri;

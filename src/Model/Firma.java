@@ -1,4 +1,4 @@
-
+package Model;
 public class Firma {
     private String firmaAd,testYeri;
 

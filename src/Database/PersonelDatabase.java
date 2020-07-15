@@ -22,7 +22,7 @@ public class PersonelDatabase {
         }
     }
 
-    public void projeSil(String personelAd) {
+    public void personelSil(String personelAd) {
         String sorgu = "delete from personel where projeAd=?";
         try {
             Connection conn = new DBConnector().baglantiGetir();
@@ -36,7 +36,7 @@ public class PersonelDatabase {
         }
     }
 
-    public DefaultTableModel projeGetir(DefaultTableModel model) {
+    public DefaultTableModel personelGetir(DefaultTableModel model) {
         model.getDataVector().removeAllElements();
         java.sql.Statement statement = null;
         String sorgu = "select personelAd from personel";
@@ -54,5 +54,21 @@ public class PersonelDatabase {
             e.printStackTrace();
         }
         return model;
+    }
+    
+    public void personelGuncelle(String personelAd,String guncellenecekAd,String level){
+    String sorgu = "update personel set personelAd=?,level=? where personelAd=?";
+    try {
+            Connection conn = new DBConnector().baglantiGetir();
+            Statement statement = (Statement) conn.createStatement();
+            PreparedStatement preparedStatement = conn.prepareStatement(sorgu);
+            preparedStatement.setString(3, personelAd);
+            preparedStatement.setString(1, guncellenecekAd);
+            preparedStatement.setString(2, level);
+            preparedStatement.execute();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

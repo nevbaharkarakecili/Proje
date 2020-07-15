@@ -1,4 +1,4 @@
-
+package Model;
 public class Proje {
     private String projeAd;
 

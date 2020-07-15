@@ -1,4 +1,4 @@
-
+package Model;
 public class Personel {
     private String personelAd,level;
 

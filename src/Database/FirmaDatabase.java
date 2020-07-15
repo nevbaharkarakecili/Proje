@@ -1,10 +1,14 @@
 package Database;
-
+import Model.Firma;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
+
 
 public class FirmaDatabase {
 
@@ -36,12 +40,12 @@ public class FirmaDatabase {
         }
     }
 
-    public DefaultTableModel firmaGetir(DefaultTableModel model) {
+     public DefaultTableModel firmaGetir(DefaultTableModel model,List<Firma> firmaList) {
+        firmaList=new ArrayList<>();
         model.getDataVector().removeAllElements();
         java.sql.Statement statement = null;
         String sorgu = "select firmaAd,testYeri from firma";
         try {
-
             Connection con = new DBConnector().baglantiGetir();
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sorgu);
@@ -49,6 +53,8 @@ public class FirmaDatabase {
                 String firmaAd = rs.getString(1);
                 String testYeri = rs.getString(2);
                 model.addRow(new Object[]{firmaAd, testYeri});
+                Firma firma=new Firma(firmaAd, testYeri);
+                firmaList.add(firma);
             }
 
         } catch (Exception e) {
@@ -56,4 +62,5 @@ public class FirmaDatabase {
         }
         return model;
     }
+
 }
