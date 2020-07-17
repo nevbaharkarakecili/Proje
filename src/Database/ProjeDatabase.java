@@ -1,9 +1,12 @@
 package Database;
 
+import Model.Proje;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 public class ProjeDatabase {
@@ -34,8 +37,13 @@ public class ProjeDatabase {
             e.printStackTrace();
         }
     }
+    ArrayList<Proje>projeList=new ArrayList<>();
 
+    public ArrayList<Proje> getProjeList() {
+        return projeList;
+    }
     public DefaultTableModel projeGetir(DefaultTableModel model) {
+        projeList=new ArrayList<>();
         model.getDataVector().removeAllElements();
         java.sql.Statement statement = null;
         String sorgu = "select projeAd from proje";
@@ -47,6 +55,8 @@ public class ProjeDatabase {
             while (rs.next()) {
                 String projeAd = rs.getString(1);
                 model.addRow(new Object[]{projeAd});
+                Proje p=new Proje(projeAd);
+                projeList.add(p);
             }
 
         } catch (Exception e) {

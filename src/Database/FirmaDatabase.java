@@ -20,6 +20,8 @@ public class FirmaDatabase {
             PreparedStatement preparedStatement = conn.prepareStatement(sorgu);
             preparedStatement.setString(1, firmaAd);
             preparedStatement.setString(2, testYeri);
+            Firma firma=new Firma(firmaAd, testYeri);
+            firmaList.add(firma);
             preparedStatement.execute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -39,8 +41,12 @@ public class FirmaDatabase {
             e.printStackTrace();
         }
     }
+    ArrayList<Firma> firmaList = new ArrayList<>();
 
-     public DefaultTableModel firmaGetir(DefaultTableModel model,List<Firma> firmaList) {
+    public ArrayList<Firma> getFirmaList() {
+        return firmaList;
+    }
+     public DefaultTableModel firmaGetir(DefaultTableModel model) {
         firmaList=new ArrayList<>();
         model.getDataVector().removeAllElements();
         java.sql.Statement statement = null;

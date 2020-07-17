@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -39,6 +40,12 @@ public class Ekran extends javax.swing.JFrame {
      */
     public Ekran() {
         initComponents();
+        DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
+        firmaDatabase.firmaGetir(model);
+        model = (DefaultTableModel) jTableProje.getModel();
+        projeDatabase.projeGetir(model);
+        model = (DefaultTableModel) jTablePersonel.getModel();
+        personelDatabase.personelGetir(model);
     }
 
     /**
@@ -744,6 +751,12 @@ public class Ekran extends javax.swing.JFrame {
 
         jLabel73.setText("Tarih");
 
+        jComboBoxOperatorSeviye.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1" }));
+
+        jComboBoxDegerlendirenSeviye.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2" }));
+
+        jComboBoxOnaySeviye.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3" }));
+
         jButtonPdfAktar.setText("PDF'e Aktar");
         jButtonPdfAktar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1383,8 +1396,8 @@ public class Ekran extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1096, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 38, Short.MAX_VALUE))
         );
 
         pack();
@@ -1431,6 +1444,24 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         for (Ekipman ek : ekipmanlar) {
             jComboBoxEkipman.addItem(ek.getEkipmanAd());
         }
+
+        for (Firma firma : firmaDatabase.getFirmaList()) {
+            jComboBoxMusteri.addItem(firma.getFirmaAd());
+            jComboBoxTestYeri.addItem(firma.getTestYeri());
+        }
+        for (Proje proje : projeDatabase.getProjeList()) {
+            jComboBoxProjeAd.addItem(proje.getProjeAd());
+        }
+        for (Personel personel : personelDatabase.getPersonelList()) {
+            if (personel.getLevel().equals("1")) {
+                jComboBoxOperatorAd.addItem(personel.getPersonelAd());
+            } else if (personel.getLevel().equals("2")) {
+                jComboBoxDegerlendirenAd.addItem(personel.getPersonelAd());
+
+            } else {
+                jComboBoxOnayAd.addItem(personel.getPersonelAd());
+            }
+        }
     }//GEN-LAST:event_formWindowActivated
 
     private void jComboBoxEkipmanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEkipmanActionPerformed
@@ -1459,17 +1490,16 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
                 }
             }
         }
-        DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
-        firmaDatabase.firmaGetir(model, firmaList);
     }//GEN-LAST:event_jComboBoxEkipmanActionPerformed
     FirmaDatabase firmaDatabase = new FirmaDatabase();
-    ArrayList<Firma> firmaList = new ArrayList<>();
-    private void jButtonFirmaEkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFirmaEkleActionPerformed
 
+    private void jButtonFirmaEkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFirmaEkleActionPerformed
+        jComboBoxMusteri.removeAllItems();
+        jComboBoxTestYeri.removeAllItems();
         firmaDatabase.firmaEkle(jTextFieldFirmaAd.getText(), jTextFieldTestYeri.getText());
         JOptionPane.showMessageDialog(rootPane, "Firma başarıyla oluşturuldu!");
         DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
-        firmaDatabase.firmaGetir(model, firmaList);
+        firmaDatabase.firmaGetir(model);
 
     }//GEN-LAST:event_jButtonFirmaEkleActionPerformed
     ProjeDatabase projeDatabase = new ProjeDatabase();
@@ -1483,12 +1513,25 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         personelDatabase.personelEkle(jTextFieldPersonelAd.getText(), jComboBoxLevel.getSelectedItem().toString());
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
         personelDatabase.personelGetir(model);
+        jComboBoxOperatorAd.removeAllItems();
+        jComboBoxDegerlendirenAd.removeAllItems();
+        jComboBoxOnayAd.removeAllItems();
+        for (Personel personel : personelDatabase.getPersonelList()) {
+            if (personel.getLevel().equals("1")) {
+                jComboBoxOperatorAd.addItem(personel.getPersonelAd());
+            } else if (personel.getLevel().equals("2")) {
+                jComboBoxDegerlendirenAd.addItem(personel.getPersonelAd());
+            } else {
+                jComboBoxOnayAd.addItem(personel.getPersonelAd());
+            }
+        }
+
     }//GEN-LAST:event_jButtonPersonelEkleActionPerformed
 
     private void jButtonFirmaSilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFirmaSilActionPerformed
         firmaDatabase.firmaSil(jTextFieldFirmaAd.getText());
         DefaultTableModel model = (DefaultTableModel) jTableFirma.getModel();
-        firmaDatabase.firmaGetir(model, firmaList);
+        firmaDatabase.firmaGetir(model);
         jComboBoxMusteri.removeItem(jTextFieldFirmaAd.getText());
     }//GEN-LAST:event_jButtonFirmaSilActionPerformed
 
@@ -1496,9 +1539,19 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         projeDatabase.projeSil(jTextFieldProjeAd.getText());
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
         projeDatabase.projeGetir(model);
+        jComboBoxProjeAd.removeItem(jTextFieldProjeAd.getText());
     }//GEN-LAST:event_jButtonProjeSilActionPerformed
 
     private void jButtonPersonelSilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonelSilActionPerformed
+
+        for (Personel personel : personelDatabase.getPersonelList()) {
+            if (personel.getLevel().equals("1")) {
+                jComboBoxOperatorAd.removeItem(jTextFieldPersonelAd.getText());
+            } else {
+                jComboBoxDegerlendirenAd.removeItem(jTextFieldPersonelAd.getText());
+                jComboBoxOnayAd.removeItem(jTextFieldPersonelAd.getText());
+            }
+        }
         personelDatabase.personelSil(jTextFieldPersonelAd.getText());
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
         personelDatabase.personelGetir(model);
@@ -1543,21 +1596,21 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
             e.printStackTrace();
         }
     }
-    
-    public void ExcelYazdr() throws IOException, WriteException{
-    WritableWorkbook workbook = Workbook.createWorkbook(new File("Rapor.xls"));
-    WritableSheet sheet = workbook.createSheet("Rapor", 0);
-  
-    Label label=new Label(0,0,"Muayene Prosedürü");
-    sheet.addCell(label);
-    label=new Label(1,0,jTextFieldMuayeneProsedur.getText());
-    sheet.addCell(label);
-    label=new Label(0,1,"Sayfa No");
-    sheet.addCell(label);
-    label=new Label(1,1,jTextFieldSayfaNo.getText());
-    sheet.addCell(label);
-    workbook.write();
-    workbook.close();
+
+    public void ExcelYazdr() throws IOException, WriteException {
+        WritableWorkbook workbook = Workbook.createWorkbook(new File("Rapor.xls"));
+        WritableSheet sheet = workbook.createSheet("Rapor", 0);
+
+        Label label = new Label(0, 0, "Muayene Prosedürü");
+        sheet.addCell(label);
+        label = new Label(1, 0, jTextFieldMuayeneProsedur.getText());
+        sheet.addCell(label);
+        label = new Label(0, 1, "Sayfa No");
+        sheet.addCell(label);
+        label = new Label(1, 1, jTextFieldSayfaNo.getText());
+        sheet.addCell(label);
+        workbook.write();
+        workbook.close();
     }
 
     /**
