@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -199,62 +200,62 @@ public class Ekran extends javax.swing.JFrame {
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jTextField34 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
-        jTextField36 = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jComboBox11 = new javax.swing.JComboBox<>();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
-        jTextField45 = new javax.swing.JTextField();
-        jTextField46 = new javax.swing.JTextField();
-        jTextField47 = new javax.swing.JTextField();
-        jTextField48 = new javax.swing.JTextField();
-        jTextField49 = new javax.swing.JTextField();
-        jTextField50 = new javax.swing.JTextField();
-        jTextField51 = new javax.swing.JTextField();
-        jTextField52 = new javax.swing.JTextField();
-        jTextField53 = new javax.swing.JTextField();
-        jTextField54 = new javax.swing.JTextField();
-        jTextField55 = new javax.swing.JTextField();
-        jTextField56 = new javax.swing.JTextField();
-        jTextField57 = new javax.swing.JTextField();
-        jTextField58 = new javax.swing.JTextField();
-        jTextField59 = new javax.swing.JTextField();
-        jTextField60 = new javax.swing.JTextField();
-        jTextField61 = new javax.swing.JTextField();
-        jTextField62 = new javax.swing.JTextField();
-        jTextField63 = new javax.swing.JTextField();
-        jTextField64 = new javax.swing.JTextField();
-        jTextField65 = new javax.swing.JTextField();
-        jTextField66 = new javax.swing.JTextField();
-        jTextField67 = new javax.swing.JTextField();
-        jTextField68 = new javax.swing.JTextField();
-        jTextField69 = new javax.swing.JTextField();
-        jTextField70 = new javax.swing.JTextField();
-        jTextField71 = new javax.swing.JTextField();
-        jTextField72 = new javax.swing.JTextField();
-        jTextField73 = new javax.swing.JTextField();
-        jTextField74 = new javax.swing.JTextField();
-        jTextField75 = new javax.swing.JTextField();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jComboBox14 = new javax.swing.JComboBox<>();
-        jComboBox15 = new javax.swing.JComboBox<>();
-        jComboBox16 = new javax.swing.JComboBox<>();
+        jTextFieldKaynak1 = new javax.swing.JTextField();
+        jTextFieldKontrol1 = new javax.swing.JTextField();
+        jTextFieldKaynakYon1 = new javax.swing.JTextField();
+        jTextFieldKalinlik1 = new javax.swing.JTextField();
+        jTextFieldCap1 = new javax.swing.JTextField();
+        jTextFieldHataTip1 = new javax.swing.JTextField();
+        jTextFieldHataYer1 = new javax.swing.JTextField();
+        jComboBoxSonuc1 = new javax.swing.JComboBox<>();
+        jTextFieldKaynak2 = new javax.swing.JTextField();
+        jTextFieldKontrol2 = new javax.swing.JTextField();
+        jTextFieldKaynakYon2 = new javax.swing.JTextField();
+        jTextFieldKalinlik2 = new javax.swing.JTextField();
+        jTextFieldCap2 = new javax.swing.JTextField();
+        jTextFieldHataTip2 = new javax.swing.JTextField();
+        jTextFieldHataYer2 = new javax.swing.JTextField();
+        jComboBoxSonuc2 = new javax.swing.JComboBox<>();
+        jTextFieldKaynak3 = new javax.swing.JTextField();
+        jTextFieldKaynak4 = new javax.swing.JTextField();
+        jTextFieldKaynak5 = new javax.swing.JTextField();
+        jTextFieldKaynak6 = new javax.swing.JTextField();
+        jTextFieldKaynak7 = new javax.swing.JTextField();
+        jTextFieldKontrol3 = new javax.swing.JTextField();
+        jTextFieldKontrol4 = new javax.swing.JTextField();
+        jTextFieldKontrol5 = new javax.swing.JTextField();
+        jTextFieldKontrol6 = new javax.swing.JTextField();
+        jTextFieldKontrol7 = new javax.swing.JTextField();
+        jTextFieldKaynakYon3 = new javax.swing.JTextField();
+        jTextFieldKaynakYon4 = new javax.swing.JTextField();
+        jTextFieldKaynakYon5 = new javax.swing.JTextField();
+        jTextFieldKaynakYon6 = new javax.swing.JTextField();
+        jTextFieldKaynakYon7 = new javax.swing.JTextField();
+        jTextFieldKalinlik3 = new javax.swing.JTextField();
+        jTextFieldKalinlik4 = new javax.swing.JTextField();
+        jTextFieldKalinlik5 = new javax.swing.JTextField();
+        jTextFieldKalinlik6 = new javax.swing.JTextField();
+        jTextFieldKalinlik7 = new javax.swing.JTextField();
+        jTextFieldCap3 = new javax.swing.JTextField();
+        jTextFieldCap4 = new javax.swing.JTextField();
+        jTextFieldCap5 = new javax.swing.JTextField();
+        jTextFieldCap6 = new javax.swing.JTextField();
+        jTextFieldCap7 = new javax.swing.JTextField();
+        jTextFieldHataTip3 = new javax.swing.JTextField();
+        jTextFieldHataTip4 = new javax.swing.JTextField();
+        jTextFieldHataTip5 = new javax.swing.JTextField();
+        jTextFieldHataTip6 = new javax.swing.JTextField();
+        jTextFieldHataTip7 = new javax.swing.JTextField();
+        jTextFieldHataYer3 = new javax.swing.JTextField();
+        jTextFieldHataYer4 = new javax.swing.JTextField();
+        jTextFieldHataYer5 = new javax.swing.JTextField();
+        jTextFieldHataYer6 = new javax.swing.JTextField();
+        jTextFieldHataYer7 = new javax.swing.JTextField();
+        jComboBoxSonuc3 = new javax.swing.JComboBox<>();
+        jComboBoxSonuc4 = new javax.swing.JComboBox<>();
+        jComboBoxSonuc5 = new javax.swing.JComboBox<>();
+        jComboBoxSonuc6 = new javax.swing.JComboBox<>();
+        jComboBoxSonuc7 = new javax.swing.JComboBox<>();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel66 = new javax.swing.JLabel();
         jSeparator8 = new javax.swing.JSeparator();
@@ -644,9 +645,10 @@ public class Ekran extends javax.swing.JFrame {
 
         jTextFieldIsikCihazi.setText("***");
 
-        jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.setText("Alın Kaynağı");
 
-        jCheckBox2.setText("jCheckBox2");
+        buttonGroup1.add(jCheckBox2);
+        jCheckBox2.setText("Köşe Kaynağı");
 
         jLabel32.setText("Süreksizliğin Yeri");
 
@@ -709,26 +711,26 @@ public class Ekran extends javax.swing.JFrame {
 
         jLabel65.setText("7");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox10.setSelectedIndex(1);
+        jComboBoxSonuc1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc1.setSelectedIndex(1);
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox11.setSelectedIndex(1);
+        jComboBoxSonuc2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc2.setSelectedIndex(1);
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox12.setSelectedIndex(1);
+        jComboBoxSonuc3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc3.setSelectedIndex(1);
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox13.setSelectedIndex(1);
+        jComboBoxSonuc4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc4.setSelectedIndex(1);
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox14.setSelectedIndex(1);
+        jComboBoxSonuc5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc5.setSelectedIndex(1);
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox15.setSelectedIndex(1);
+        jComboBoxSonuc6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc6.setSelectedIndex(1);
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
-        jComboBox16.setSelectedIndex(1);
+        jComboBoxSonuc7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Onay", "Bekliyor", "Red" }));
+        jComboBoxSonuc7.setSelectedIndex(1);
 
         jLabel66.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel66.setText("Personel Bilgileri");
@@ -825,13 +827,13 @@ public class Ekran extends javax.swing.JFrame {
                                 .addGap(47, 47, 47)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField27)
-                                    .addComponent(jTextField34)
-                                    .addComponent(jTextField41)
-                                    .addComponent(jTextField42)
-                                    .addComponent(jTextField43)
-                                    .addComponent(jTextField44)
-                                    .addComponent(jTextField45))
+                                    .addComponent(jTextFieldKaynak1)
+                                    .addComponent(jTextFieldKaynak2)
+                                    .addComponent(jTextFieldKaynak3)
+                                    .addComponent(jTextFieldKaynak4)
+                                    .addComponent(jTextFieldKaynak5)
+                                    .addComponent(jTextFieldKaynak6)
+                                    .addComponent(jTextFieldKaynak7))
                                 .addGap(35, 35, 35)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -842,33 +844,33 @@ public class Ekran extends javax.swing.JFrame {
                                         .addComponent(jLabel54))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField28)
-                                            .addComponent(jTextField35, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                                            .addComponent(jTextField46)
-                                            .addComponent(jTextField47)
-                                            .addComponent(jTextField48)
-                                            .addComponent(jTextField49)
-                                            .addComponent(jTextField50))
+                                            .addComponent(jTextFieldKontrol1)
+                                            .addComponent(jTextFieldKontrol2, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldKontrol3)
+                                            .addComponent(jTextFieldKontrol4)
+                                            .addComponent(jTextFieldKontrol5)
+                                            .addComponent(jTextFieldKontrol6)
+                                            .addComponent(jTextFieldKontrol7))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField29)
-                                            .addComponent(jTextField36, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                            .addComponent(jTextField51)
-                                            .addComponent(jTextField52)
-                                            .addComponent(jTextField53)
-                                            .addComponent(jTextField54)
-                                            .addComponent(jTextField55))
+                                            .addComponent(jTextFieldKaynakYon1)
+                                            .addComponent(jTextFieldKaynakYon2, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldKaynakYon3)
+                                            .addComponent(jTextFieldKaynakYon4)
+                                            .addComponent(jTextFieldKaynakYon5)
+                                            .addComponent(jTextFieldKaynakYon6)
+                                            .addComponent(jTextFieldKaynakYon7))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField30)
+                                            .addComponent(jTextFieldKalinlik1)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jTextFieldKalinlik7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldKalinlik6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldKalinlik5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldKalinlik4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldKalinlik3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldKalinlik2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(0, 0, Short.MAX_VALUE)))))
                                 .addGap(33, 33, 33)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -877,53 +879,53 @@ public class Ekran extends javax.swing.JFrame {
                                         .addGap(36, 36, 36)
                                         .addComponent(jLabel56))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField62, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField68, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField64, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldHataTip6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField65, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldCap7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField70, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jTextFieldHataTip7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(31, 31, 31)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel57)
-                                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField71, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField73, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldHataYer1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHataYer7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(29, 29, 29)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox10, 0, 75, Short.MAX_VALUE)
-                                    .addComponent(jComboBox11, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox12, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox13, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox14, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox15, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox16, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jComboBoxSonuc1, 0, 75, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSonuc7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addComponent(jLabel66)
@@ -1017,9 +1019,9 @@ public class Ekran extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addGap(28, 28, 28)
-                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
+                                                .addGap(28, 28, 28)
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1050,8 +1052,8 @@ public class Ekran extends javax.swing.JFrame {
                                                     .addComponent(jLabel29)
                                                     .addComponent(jLabel30)))
                                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(38, 38, 38)))
+                                                .addGap(270, 270, 270)
+                                                .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(40, 40, 40)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jTextFieldMuayeneBolge)
@@ -1082,7 +1084,7 @@ public class Ekran extends javax.swing.JFrame {
                                         .addComponent(jLabel32)))
                                 .addGroup(jPanel4Layout.createSequentialGroup()
                                     .addGap(62, 62, 62)
-                                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1274,83 +1276,83 @@ public class Ekran extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldKaynak1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKontrol1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynakYon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKalinlik1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCap1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataTip1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataYer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxSonuc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60)
-                    .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldKaynak2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKontrol2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynakYon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKalinlik2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCap2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataTip2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataYer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxSonuc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel61)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldKaynak3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKontrol3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynakYon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKalinlik3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCap3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataTip3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataYer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxSonuc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel62)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldKaynak4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKontrol4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynakYon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKalinlik4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCap4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataTip4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldHataYer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxSonuc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel63)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldKaynak5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKontrol5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKaynakYon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKalinlik5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldCap5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataTip5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataYer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxSonuc5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel64)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynak6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldKontrol6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKaynakYon6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKalinlik6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldCap6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataTip6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataYer6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxSonuc6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel65)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKaynak7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKontrol7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldKaynakYon7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKalinlik7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldCap7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataTip7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldHataYer7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxSonuc7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1396,8 +1398,8 @@ public class Ekran extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1096, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -1612,54 +1614,202 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         sheet.addCell(label);
         label = new Label(2, 1, jTextFieldSayfaNo.getText());
         sheet.addCell(label);
-        label=new Label(0,2,"Proje Adı");
+        label = new Label(0, 2, "Proje Adı");
         sheet.addCell(label);
-        label=new Label(0,3,jComboBoxProjeAd.getSelectedItem().toString());
+        label = new Label(0, 3, jComboBoxProjeAd.getSelectedItem().toString());
         sheet.addCell(label);
-        label=new Label(1,2,"Muayene Kapsamı");
+        label = new Label(1, 2, "Muayene Kapsamı");
         sheet.addCell(label);
-        label=new Label(1,3,jTextFieldMuayeneKapsam.getText());
+        label = new Label(1, 3, jTextFieldMuayeneKapsam.getText());
         sheet.addCell(label);
-        label=new Label(2,2,"Rapor No");
+        label = new Label(2, 2, "Rapor No");
         sheet.addCell(label);
-        label=new Label(2,3,jTextFieldRaporNo.getText());
+        label = new Label(2, 3, jTextFieldRaporNo.getText());
         sheet.addCell(label);
-        label=new Label(0,4,"Test Yeri");
+        label = new Label(0, 4, "Test Yeri");
         sheet.addCell(label);
-        label=new Label(0,5,jComboBoxTestYeri.getSelectedItem().toString());
+        label = new Label(0, 5, jComboBoxTestYeri.getSelectedItem().toString());
         sheet.addCell(label);
-        label=new Label(1,4,"Resim No");
+        label = new Label(1, 4, "Resim No");
         sheet.addCell(label);
-        label=new Label(1,5,jTextFieldResimNo.getText());
+        label = new Label(1, 5, jTextFieldResimNo.getText());
         sheet.addCell(label);
-        label=new Label(2,4,"Rapor Tarihi");
+        label = new Label(2, 4, "Rapor Tarihi");
         sheet.addCell(label);
-        label=new Label(2,5,jTextFieldRaporTarih.getText());
+        label = new Label(2, 5, jTextFieldRaporTarih.getText());
         sheet.addCell(label);
-        label=new Label(0,6,"Muayene Standardı");
+        label = new Label(0, 6, "Muayene Standardı");
         sheet.addCell(label);
-        label=new Label(0,7,jTextFieldMuayeneStandard.getText());
+        label = new Label(0, 7, jTextFieldMuayeneStandard.getText());
         sheet.addCell(label);
-        label=new Label(1,6,"Yüzey Durumu");
+        label = new Label(1, 6, "Yüzey Durumu");
         sheet.addCell(label);
-        label=new Label(1,7,jTextFieldYuzeyDurumu.getText());
+        label = new Label(1, 7, jTextFieldYuzeyDurumu.getText());
         sheet.addCell(label);
-        label=new Label(2,6,"İş Emri No");
+        label = new Label(2, 6, "İş Emri No");
         sheet.addCell(label);
-        label=new Label(2,7,jTextFieldIsEmriNo.getText());
+        label = new Label(2, 7, jTextFieldIsEmriNo.getText());
         sheet.addCell(label);
-        label=new Label(0,8,"Değerlen. Standardı");
+        label = new Label(0, 8, "Değerlen. Standardı");
         sheet.addCell(label);
-        label=new Label(0,9,jTextFieldDegerlendirmeStandard.getText());
+        label = new Label(0, 9, jTextFieldDegerlendirmeStandard.getText());
         sheet.addCell(label);
-        label=new Label(1,8,"Muayene Aşaması");
+        label = new Label(1, 8, "Muayene Aşaması");
         sheet.addCell(label);
-        label=new Label(1,9,jTextFieldMuayeneAsamasi.getText());
+        label = new Label(1, 9, jTextFieldMuayeneAsamasi.getText());
         sheet.addCell(label);
-        label=new Label(2,8,"Teklif No");
+        label = new Label(2, 8, "Teklif No");
         sheet.addCell(label);
-        label=new Label(2,9,jTextFieldTeklifNo.getText());
+        label = new Label(2, 9, jTextFieldTeklifNo.getText());
         sheet.addCell(label);
+        label = new Label(0, 10, "Ekipman");
+        sheet.addCell(label);
+        label = new Label(0, 11, jComboBoxEkipman.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 10, "Muayene Bölgesi");
+
+        label = new Label(1, 11, jTextFieldMuayeneBolge.getText());
+
+        label = new Label(2, 10, "Yüzey Sıcaklığı");
+
+        label = new Label(2, 11, jTextFieldYuzeySicaklik.getText());
+
+        label = new Label(0, 12, "Kutup Mesafesi");
+        sheet.addCell(label);
+        label = new Label(0, 13, jComboBoxKutup.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 12, "Akım Tipi");
+        sheet.addCell(label);
+        label = new Label(1, 13, jComboBoxAkimTip.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(2, 12, "Bölgedeki Alan Şiddeti");
+        sheet.addCell(label);
+        label = new Label(2, 13, jTextFieldMuayeneAlanSiddet.getText());
+        sheet.addCell(label);
+        label = new Label(0, 14, "MP Taşıyıcı");
+        sheet.addCell(label);
+        label = new Label(0, 15, jComboBoxMP.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 14, "Işık Şiddeti");
+        sheet.addCell(label);
+        label = new Label(1, 15, jComboBoxİsikMesafe.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(2, 14, "Yüzey");
+        sheet.addCell(label);
+        label = new Label(2, 15, jTextFieldYuzey.getText());
+        sheet.addCell(label);
+        label = new Label(0, 16, "Mıknatıslama Tekniği");
+        sheet.addCell(label);
+        label = new Label(0, 17, jComboBoxMiknatislama.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 16, "Muayene Ortamı");
+        sheet.addCell(label);
+        label = new Label(1, 17, jTextFieldMuayeneOrtami.getText());
+        sheet.addCell(label);
+        label = new Label(2, 16, "Işık Cihaz Tanımı");
+        sheet.addCell(label);
+        label = new Label(2, 17, jTextFieldIsikCihazi.getText());
+        sheet.addCell(label);
+        label = new Label(0, 18, "UV Işık Şiddeti");
+        sheet.addCell(label);
+        label = new Label(0, 19, jComboBoxUV.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 18, "Mıknatıs Giderimi");
+        sheet.addCell(label);
+        label = new Label(1, 19, jTextFieldMiknatisGiderimi.getText());
+        sheet.addCell(label);
+        label = new Label(2, 18, "Kaldırma Testi Tarih");
+        sheet.addCell(label);
+        label = new Label(2, 19, jTextFieldKaldirmaTestiTarih.getText());
+        sheet.addCell(label);
+        label = new Label(0, 20, "Işık Mesafesi");
+        sheet.addCell(label);
+        label = new Label(0, 21, jComboBoxİsikMesafe.getSelectedItem().toString());
+        sheet.addCell(label);
+        label = new Label(1, 20, "Isıl İşlem");
+        sheet.addCell(label);
+        label = new Label(1, 21, jTextFieldIsilIslem.getText());
+        sheet.addCell(label);
+        if (jCheckBox1.isSelected()) {
+            label = new Label(2, 20, "Seçilen Kaynak");
+            sheet.addCell(label);
+            label = new Label(2, 21, jCheckBox1.getText());
+            sheet.addCell(label);
+        } else {
+            label = new Label(2, 20, "Seçilen Kaynak");
+            sheet.addCell(label);
+            label = new Label(2, 21, jCheckBox2.getText());
+            sheet.addCell(label);
+        }
+        label = new Label(0,22,"Standarttan Sapmalar");
+        sheet.addCell(label);
+        label = new Label(0,23,jTextFieldStandSapma.getText());
+        sheet.addCell(label);
+        label = new Label(0,24,"Muayene Tarihleri");
+        sheet.addCell(label);
+        label = new Label(0,25,jTextFieldMuayeneTarih.getText());
+        sheet.addCell(label);
+        label = new Label(0,26,"Açıklama ve Ekler");
+        sheet.addCell(label);
+        label = new Label(0,27,jTextFieldAciklama.getText());
+        sheet.addCell(label);
+        
+        label = new Label(0,28,"Sıra No");
+        sheet.addCell(label);
+        label = new Label(0,29,"1");
+        sheet.addCell(label);
+        label = new Label(0,30,"2");
+        sheet.addCell(label);
+        label = new Label(0,31,"3");
+        sheet.addCell(label);
+        label = new Label(0,32,"4");
+        sheet.addCell(label);
+        label = new Label(0,33,"5");
+        sheet.addCell(label);
+        label = new Label(0,34,"6");
+        sheet.addCell(label);
+        label = new Label(0,35,"7");
+        sheet.addCell(label);
+        label = new Label(1,28,"Parça No");
+        label = new Label(1,29,jTextFieldKaynak1.getText());
+        sheet.addCell(label);
+        label = new Label(1,30,jTextFieldKaynak2.getText());
+        sheet.addCell(label);
+        label = new Label(1,31,jTextFieldKaynak3.getText());
+        sheet.addCell(label);
+        label = new Label(1,32,jTextFieldKaynak4.getText());
+        sheet.addCell(label);
+        label = new Label(1,33,jTextFieldKaynak5.getText());
+        sheet.addCell(label);
+        label = new Label(1,34,jTextFieldKaynak6.getText());
+        sheet.addCell(label);
+        label = new Label(1,35,jTextFieldKaynak7.getText());
+        sheet.addCell(label);
+        label = new Label(1,28,"Kontrol Uzunluk");
+        sheet.addCell(label);
+        label = new Label(1,29,jTextFieldKontrol1.getText());
+        sheet.addCell(label);
+        label = new Label(1,30,jTextFieldKontrol2.getText());
+        sheet.addCell(label);
+        label = new Label(1,31,jTextFieldKontrol3.getText());
+        sheet.addCell(label);
+        label = new Label(1,32,jTextFieldKontrol4.getText());
+        sheet.addCell(label);
+        label = new Label(1,33,jTextFieldKontrol5.getText());
+        sheet.addCell(label);
+        label = new Label(1,34,jTextFieldKontrol6.getText());
+        sheet.addCell(label);
+        label = new Label(1,35,jTextFieldKontrol7.getText());
+        sheet.addCell(label);
+        label = new Label(2,28,"Kaynak Yön.");
+        label = new Label(2,29,jTextFieldKaynakYon1.getText());
+        label = new Label(2,30,jTextFieldKaynakYon2.getText());
+        label = new Label(2,31,jTextFieldKaynakYon3.getText());
+        label = new Label(2,32,jTextFieldKaynakYon4.getText());
+        label = new Label(2,33,jTextFieldKaynakYon5.getText());
+        label = new Label(2,34,jTextFieldKaynakYon6.getText());
+        label = new Label(2,35,jTextFieldKaynakYon7.getText());
+        
         workbook.write();
         workbook.close();
     }
@@ -1713,13 +1863,6 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JButton jButtonProjeSil;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBoxAkimTip;
     private javax.swing.JComboBox<String> jComboBoxDegerlendirenAd;
     private javax.swing.JComboBox<String> jComboBoxDegerlendirenSeviye;
@@ -1734,6 +1877,13 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JComboBox<String> jComboBoxOperatorAd;
     private javax.swing.JComboBox<String> jComboBoxOperatorSeviye;
     private javax.swing.JComboBox<String> jComboBoxProjeAd;
+    private javax.swing.JComboBox<String> jComboBoxSonuc1;
+    private javax.swing.JComboBox<String> jComboBoxSonuc2;
+    private javax.swing.JComboBox<String> jComboBoxSonuc3;
+    private javax.swing.JComboBox<String> jComboBoxSonuc4;
+    private javax.swing.JComboBox<String> jComboBoxSonuc5;
+    private javax.swing.JComboBox<String> jComboBoxSonuc6;
+    private javax.swing.JComboBox<String> jComboBoxSonuc7;
     private javax.swing.JComboBox<String> jComboBoxTestYeri;
     private javax.swing.JComboBox<String> jComboBoxUV;
     private javax.swing.JComboBox<String> jComboBoxİsikMesafe;
@@ -1838,65 +1988,65 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     private javax.swing.JTable jTablePersonel;
     private javax.swing.JTable jTableProje;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
-    private javax.swing.JTextField jTextField58;
-    private javax.swing.JTextField jTextField59;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
-    private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField63;
-    private javax.swing.JTextField jTextField64;
-    private javax.swing.JTextField jTextField65;
-    private javax.swing.JTextField jTextField66;
-    private javax.swing.JTextField jTextField67;
-    private javax.swing.JTextField jTextField68;
-    private javax.swing.JTextField jTextField69;
-    private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField71;
-    private javax.swing.JTextField jTextField72;
-    private javax.swing.JTextField jTextField73;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
     private javax.swing.JTextField jTextFieldAciklama;
+    private javax.swing.JTextField jTextFieldCap1;
+    private javax.swing.JTextField jTextFieldCap2;
+    private javax.swing.JTextField jTextFieldCap3;
+    private javax.swing.JTextField jTextFieldCap4;
+    private javax.swing.JTextField jTextFieldCap5;
+    private javax.swing.JTextField jTextFieldCap6;
+    private javax.swing.JTextField jTextFieldCap7;
     private javax.swing.JTextField jTextFieldDegerlendirenTarih;
     private javax.swing.JTextField jTextFieldDegerlendirmeStandard;
     private javax.swing.JTextField jTextFieldFirmaAd;
     private javax.swing.JTextField jTextFieldGuncellenecekAd;
+    private javax.swing.JTextField jTextFieldHataTip1;
+    private javax.swing.JTextField jTextFieldHataTip2;
+    private javax.swing.JTextField jTextFieldHataTip3;
+    private javax.swing.JTextField jTextFieldHataTip4;
+    private javax.swing.JTextField jTextFieldHataTip5;
+    private javax.swing.JTextField jTextFieldHataTip6;
+    private javax.swing.JTextField jTextFieldHataTip7;
+    private javax.swing.JTextField jTextFieldHataYer1;
+    private javax.swing.JTextField jTextFieldHataYer2;
+    private javax.swing.JTextField jTextFieldHataYer3;
+    private javax.swing.JTextField jTextFieldHataYer4;
+    private javax.swing.JTextField jTextFieldHataYer5;
+    private javax.swing.JTextField jTextFieldHataYer6;
+    private javax.swing.JTextField jTextFieldHataYer7;
     private javax.swing.JTextField jTextFieldIsEmriNo;
     private javax.swing.JTextField jTextFieldIsikCihazi;
     private javax.swing.JTextField jTextFieldIsikSiddeti;
     private javax.swing.JTextField jTextFieldIsilIslem;
     private javax.swing.JTextField jTextFieldKaldirmaTestiTarih;
+    private javax.swing.JTextField jTextFieldKalinlik1;
+    private javax.swing.JTextField jTextFieldKalinlik2;
+    private javax.swing.JTextField jTextFieldKalinlik3;
+    private javax.swing.JTextField jTextFieldKalinlik4;
+    private javax.swing.JTextField jTextFieldKalinlik5;
+    private javax.swing.JTextField jTextFieldKalinlik6;
+    private javax.swing.JTextField jTextFieldKalinlik7;
+    private javax.swing.JTextField jTextFieldKaynak1;
+    private javax.swing.JTextField jTextFieldKaynak2;
+    private javax.swing.JTextField jTextFieldKaynak3;
+    private javax.swing.JTextField jTextFieldKaynak4;
+    private javax.swing.JTextField jTextFieldKaynak5;
+    private javax.swing.JTextField jTextFieldKaynak6;
+    private javax.swing.JTextField jTextFieldKaynak7;
+    private javax.swing.JTextField jTextFieldKaynakYon1;
+    private javax.swing.JTextField jTextFieldKaynakYon2;
+    private javax.swing.JTextField jTextFieldKaynakYon3;
+    private javax.swing.JTextField jTextFieldKaynakYon4;
+    private javax.swing.JTextField jTextFieldKaynakYon5;
+    private javax.swing.JTextField jTextFieldKaynakYon6;
+    private javax.swing.JTextField jTextFieldKaynakYon7;
+    private javax.swing.JTextField jTextFieldKontrol1;
+    private javax.swing.JTextField jTextFieldKontrol2;
+    private javax.swing.JTextField jTextFieldKontrol3;
+    private javax.swing.JTextField jTextFieldKontrol4;
+    private javax.swing.JTextField jTextFieldKontrol5;
+    private javax.swing.JTextField jTextFieldKontrol6;
+    private javax.swing.JTextField jTextFieldKontrol7;
     private javax.swing.JTextField jTextFieldLevel;
     private javax.swing.JTextField jTextFieldMiknatisGiderimi;
     private javax.swing.JTextField jTextFieldMuayeneAlanSiddet;
