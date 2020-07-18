@@ -27,6 +27,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import jxl.Workbook;
 import jxl.format.Alignment;
@@ -1403,9 +1404,7 @@ public class Ekran extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1424, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1564,7 +1563,12 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
         personelDatabase.personelGetir(model);
     }//GEN-LAST:event_jButtonPersonelSilActionPerformed
-
+    public boolean gecerliTextField(JTextField jTextField) {
+        if (jTextField.getText().equals("")) {
+            return false;
+        }
+        return true;
+    }
     private void jButtonPersonelGuncelleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonelGuncelleActionPerformed
         personelDatabase.personelGuncelle(jTextFieldPersAd.getText(), jTextFieldGuncellenecekAd.getText(), jTextFieldLevel.getText());
         DefaultTableModel model = (DefaultTableModel) jTablePersonel.getModel();
@@ -1572,12 +1576,58 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
     }//GEN-LAST:event_jButtonPersonelGuncelleActionPerformed
 
     private void jButtonPdfAktarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPdfAktarActionPerformed
-        pdfYazdir(jPanel4);
+        if (gecerliTextField(jTextFieldKaynak1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Kaynak/Parça No giriniz");
+        }
+        if (gecerliTextField(jTextFieldCap1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Çap giriniz");
+        }
+        if (gecerliTextField(jTextFieldHataTip1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Hata Tipi giriniz");
+        }
+        if (gecerliTextField(jTextFieldHataYer1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Hata Yeri giriniz");
+        }
+        if (gecerliTextField(jTextFieldKalinlik1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Kalınlık giriniz");
+        }
+        if (gecerliTextField(jTextFieldKaynakYon1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Kaynak Yön. giriniz");
+        }
+        if (gecerliTextField(jTextFieldKontrol1) == false) {
+            JOptionPane.showMessageDialog(rootPane, "Kontrol Uzun. giriniz");
+        } else {
+            pdfYazdir(jPanel4);
+        }
+
     }//GEN-LAST:event_jButtonPdfAktarActionPerformed
 
     private void jButtonExcelAktarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcelAktarActionPerformed
         try {
-            ExcelYazdr();
+            if (gecerliTextField(jTextFieldKaynak1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Kaynak/Parça No giriniz");
+            }
+            if (gecerliTextField(jTextFieldCap1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Çap giriniz");
+            }
+            if (gecerliTextField(jTextFieldHataTip1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Hata Tipi giriniz");
+            }
+            if (gecerliTextField(jTextFieldHataYer1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Hata Yeri giriniz");
+            }
+            if (gecerliTextField(jTextFieldKalinlik1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Kalınlık giriniz");
+            }
+            if (gecerliTextField(jTextFieldKaynakYon1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Kaynak Yön. giriniz");
+            }
+            if (gecerliTextField(jTextFieldKontrol1) == false) {
+                JOptionPane.showMessageDialog(rootPane, "Kontrol Uzun. giriniz");
+            } else {
+                ExcelYazdr();
+            }
+
         } catch (IOException ex) {
             Logger.getLogger(Ekran.class.getName()).log(Level.SEVERE, null, ex);
         } catch (WriteException ex) {
@@ -1613,334 +1663,334 @@ ArrayList<Ekipman> ekipmanlar = new ArrayList<>();
         cellFormat.setVerticalAlignment(VerticalAlignment.CENTRE);
         cellFormat.setBorder(Border.ALL, BorderLineStyle.THIN);
         cellFormat.setWrap(true);
-        Label label = new Label(0, 0, "Müşteri",cellFormat);
+        Label label = new Label(0, 0, "Müşteri", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 1, jComboBoxMusteri.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 1, jComboBoxMusteri.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 0, "Muayene Prosedürü",cellFormat);
+        label = new Label(1, 0, "Muayene Prosedürü", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 1, jTextFieldMuayeneProsedur.getText(),cellFormat);
+        label = new Label(1, 1, jTextFieldMuayeneProsedur.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 0, "Sayfa No",cellFormat);
+        label = new Label(2, 0, "Sayfa No", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 1, jTextFieldSayfaNo.getText(),cellFormat);
+        label = new Label(2, 1, jTextFieldSayfaNo.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 2, "Proje Adı",cellFormat);
+        label = new Label(0, 2, "Proje Adı", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 3, jComboBoxProjeAd.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 3, jComboBoxProjeAd.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 2, "Muayene Kapsamı",cellFormat);
+        label = new Label(1, 2, "Muayene Kapsamı", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 3, jTextFieldMuayeneKapsam.getText(),cellFormat);
+        label = new Label(1, 3, jTextFieldMuayeneKapsam.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 2, "Rapor No",cellFormat);
+        label = new Label(2, 2, "Rapor No", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 3, jTextFieldRaporNo.getText(),cellFormat);
+        label = new Label(2, 3, jTextFieldRaporNo.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 4, "Test Yeri",cellFormat);
+        label = new Label(0, 4, "Test Yeri", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 5, jComboBoxTestYeri.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 5, jComboBoxTestYeri.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 4, "Resim No",cellFormat);
+        label = new Label(1, 4, "Resim No", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 5, jTextFieldResimNo.getText(),cellFormat);
+        label = new Label(1, 5, jTextFieldResimNo.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 4, "Rapor Tarihi",cellFormat);
+        label = new Label(2, 4, "Rapor Tarihi", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 5, jTextFieldRaporTarih.getText(),cellFormat);
+        label = new Label(2, 5, jTextFieldRaporTarih.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 6, "Muayene Standardı",cellFormat);
+        label = new Label(0, 6, "Muayene Standardı", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 7, jTextFieldMuayeneStandard.getText(),cellFormat);
+        label = new Label(0, 7, jTextFieldMuayeneStandard.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 6, "Yüzey Durumu",cellFormat);
+        label = new Label(1, 6, "Yüzey Durumu", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 7, jTextFieldYuzeyDurumu.getText(),cellFormat);
+        label = new Label(1, 7, jTextFieldYuzeyDurumu.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 6, "İş Emri No",cellFormat);
+        label = new Label(2, 6, "İş Emri No", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 7, jTextFieldIsEmriNo.getText(),cellFormat);
+        label = new Label(2, 7, jTextFieldIsEmriNo.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 8, "Değerlen. Standardı",cellFormat);
+        label = new Label(0, 8, "Değerlen. Standardı", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 9, jTextFieldDegerlendirmeStandard.getText(),cellFormat);
+        label = new Label(0, 9, jTextFieldDegerlendirmeStandard.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 8, "Muayene Aşaması",cellFormat);
+        label = new Label(1, 8, "Muayene Aşaması", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 9, jTextFieldMuayeneAsamasi.getText(),cellFormat);
+        label = new Label(1, 9, jTextFieldMuayeneAsamasi.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 8, "Teklif No",cellFormat);
+        label = new Label(2, 8, "Teklif No", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 9, jTextFieldTeklifNo.getText(),cellFormat);
+        label = new Label(2, 9, jTextFieldTeklifNo.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 10, "Ekipman",cellFormat);
+        label = new Label(0, 10, "Ekipman", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 11, jComboBoxEkipman.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 11, jComboBoxEkipman.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 10, "Muayene Bölgesi",cellFormat);
+        label = new Label(1, 10, "Muayene Bölgesi", cellFormat);
 
-        label = new Label(1, 11, jTextFieldMuayeneBolge.getText(),cellFormat);
+        label = new Label(1, 11, jTextFieldMuayeneBolge.getText(), cellFormat);
 
-        label = new Label(2, 10, "Yüzey Sıcaklığı",cellFormat);
+        label = new Label(2, 10, "Yüzey Sıcaklığı", cellFormat);
 
-        label = new Label(2, 11, jTextFieldYuzeySicaklik.getText(),cellFormat);
+        label = new Label(2, 11, jTextFieldYuzeySicaklik.getText(), cellFormat);
 
-        label = new Label(0, 12, "Kutup Mesafesi",cellFormat);
+        label = new Label(0, 12, "Kutup Mesafesi", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 13, jComboBoxKutup.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 13, jComboBoxKutup.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 12, "Akım Tipi",cellFormat);
+        label = new Label(1, 12, "Akım Tipi", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 13, jComboBoxAkimTip.getSelectedItem().toString(),cellFormat);
+        label = new Label(1, 13, jComboBoxAkimTip.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 12, "Bölgedeki Alan Şiddeti",cellFormat);
+        label = new Label(2, 12, "Bölgedeki Alan Şiddeti", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 13, jTextFieldMuayeneAlanSiddet.getText(),cellFormat);
+        label = new Label(2, 13, jTextFieldMuayeneAlanSiddet.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 14, "MP Taşıyıcı",cellFormat);
+        label = new Label(0, 14, "MP Taşıyıcı", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 15, jComboBoxMP.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 15, jComboBoxMP.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 14, "Işık Şiddeti",cellFormat);
+        label = new Label(1, 14, "Işık Şiddeti", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 15, jComboBoxİsikMesafe.getSelectedItem().toString(),cellFormat);
+        label = new Label(1, 15, jComboBoxİsikMesafe.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 14, "Yüzey",cellFormat);
+        label = new Label(2, 14, "Yüzey", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 15, jTextFieldYuzey.getText(),cellFormat);
+        label = new Label(2, 15, jTextFieldYuzey.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 16, "Mıknatıslama Tekniği",cellFormat);
+        label = new Label(0, 16, "Mıknatıslama Tekniği", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 17, jComboBoxMiknatislama.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 17, jComboBoxMiknatislama.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 16, "Muayene Ortamı",cellFormat);
+        label = new Label(1, 16, "Muayene Ortamı", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 17, jTextFieldMuayeneOrtami.getText(),cellFormat);
+        label = new Label(1, 17, jTextFieldMuayeneOrtami.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 16, "Işık Cihaz Tanımı",cellFormat);
+        label = new Label(2, 16, "Işık Cihaz Tanımı", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 17, jTextFieldIsikCihazi.getText(),cellFormat);
+        label = new Label(2, 17, jTextFieldIsikCihazi.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 18, "UV Işık Şiddeti",cellFormat);
+        label = new Label(0, 18, "UV Işık Şiddeti", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 19, jComboBoxUV.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 19, jComboBoxUV.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 18, "Mıknatıs Giderimi",cellFormat);
+        label = new Label(1, 18, "Mıknatıs Giderimi", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 19, jTextFieldMiknatisGiderimi.getText(),cellFormat);
+        label = new Label(1, 19, jTextFieldMiknatisGiderimi.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 18, "Kaldırma Testi Tarih",cellFormat);
+        label = new Label(2, 18, "Kaldırma Testi Tarih", cellFormat);
         sheet.addCell(label);
-        label = new Label(2, 19, jTextFieldKaldirmaTestiTarih.getText(),cellFormat);
+        label = new Label(2, 19, jTextFieldKaldirmaTestiTarih.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 20, "Işık Mesafesi",cellFormat);
+        label = new Label(0, 20, "Işık Mesafesi", cellFormat);
         sheet.addCell(label);
-        label = new Label(0, 21, jComboBoxİsikMesafe.getSelectedItem().toString(),cellFormat);
+        label = new Label(0, 21, jComboBoxİsikMesafe.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 20, "Isıl İşlem",cellFormat);
+        label = new Label(1, 20, "Isıl İşlem", cellFormat);
         sheet.addCell(label);
-        label = new Label(1, 21, jTextFieldIsilIslem.getText(),cellFormat);
+        label = new Label(1, 21, jTextFieldIsilIslem.getText(), cellFormat);
         sheet.addCell(label);
         if (jCheckBox1.isSelected()) {
-            label = new Label(2, 20, "Seçilen Kaynak",cellFormat);
+            label = new Label(2, 20, "Seçilen Kaynak", cellFormat);
             sheet.addCell(label);
-            label = new Label(2, 21, jCheckBox1.getText(),cellFormat);
+            label = new Label(2, 21, jCheckBox1.getText(), cellFormat);
             sheet.addCell(label);
         } else {
-            label = new Label(2, 20, "Seçilen Kaynak",cellFormat);
+            label = new Label(2, 20, "Seçilen Kaynak", cellFormat);
             sheet.addCell(label);
-            label = new Label(2, 21, jCheckBox2.getText(),cellFormat);
+            label = new Label(2, 21, jCheckBox2.getText(), cellFormat);
             sheet.addCell(label);
         }
-        label = new Label(0,22,"Standarttan Sapmalar",cellFormat);
+        label = new Label(0, 22, "Standarttan Sapmalar", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,23,jTextFieldStandSapma.getText(),cellFormat);
+        label = new Label(0, 23, jTextFieldStandSapma.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0,24,"Muayene Tarihleri",cellFormat);
+        label = new Label(0, 24, "Muayene Tarihleri", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,25,jTextFieldMuayeneTarih.getText(),cellFormat);
+        label = new Label(0, 25, jTextFieldMuayeneTarih.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0,26,"Açıklama ve Ekler",cellFormat);
+        label = new Label(0, 26, "Açıklama ve Ekler", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,27,jTextFieldAciklama.getText(),cellFormat);
+        label = new Label(0, 27, jTextFieldAciklama.getText(), cellFormat);
         sheet.addCell(label);
-        
-        label = new Label(0,28,"Sıra No",cellFormat);
+
+        label = new Label(0, 28, "Sıra No", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,29,"1",cellFormat);
+        label = new Label(0, 29, "1", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,30,"2",cellFormat);
+        label = new Label(0, 30, "2", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,31,"3",cellFormat);
+        label = new Label(0, 31, "3", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,32,"4",cellFormat);
+        label = new Label(0, 32, "4", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,33,"5",cellFormat);
+        label = new Label(0, 33, "5", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,34,"6",cellFormat);
+        label = new Label(0, 34, "6", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,35,"7",cellFormat);
+        label = new Label(0, 35, "7", cellFormat);
         sheet.addCell(label);
-        label = new Label(1,28,"Parça No,cellFormat");
-        label = new Label(1,29,jTextFieldKaynak1.getText(),cellFormat);
+        label = new Label(1, 28, "Parça No,cellFormat");
+        label = new Label(1, 29, jTextFieldKaynak1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,30,jTextFieldKaynak2.getText(),cellFormat);
+        label = new Label(1, 30, jTextFieldKaynak2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,31,jTextFieldKaynak3.getText(),cellFormat);
+        label = new Label(1, 31, jTextFieldKaynak3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,32,jTextFieldKaynak4.getText(),cellFormat);
+        label = new Label(1, 32, jTextFieldKaynak4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,33,jTextFieldKaynak5.getText(),cellFormat);
+        label = new Label(1, 33, jTextFieldKaynak5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,34,jTextFieldKaynak6.getText(),cellFormat);
+        label = new Label(1, 34, jTextFieldKaynak6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,35,jTextFieldKaynak7.getText(),cellFormat);
+        label = new Label(1, 35, jTextFieldKaynak7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,28,"Kontrol Uzunluk",cellFormat);
+        label = new Label(1, 28, "Kontrol Uzunluk", cellFormat);
         sheet.addCell(label);
-        label = new Label(1,29,jTextFieldKontrol1.getText(),cellFormat);
+        label = new Label(1, 29, jTextFieldKontrol1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,30,jTextFieldKontrol2.getText(),cellFormat);
+        label = new Label(1, 30, jTextFieldKontrol2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,31,jTextFieldKontrol3.getText(),cellFormat);
+        label = new Label(1, 31, jTextFieldKontrol3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,32,jTextFieldKontrol4.getText(),cellFormat);
+        label = new Label(1, 32, jTextFieldKontrol4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,33,jTextFieldKontrol5.getText(),cellFormat);
+        label = new Label(1, 33, jTextFieldKontrol5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,34,jTextFieldKontrol6.getText(),cellFormat);
+        label = new Label(1, 34, jTextFieldKontrol6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,35,jTextFieldKontrol7.getText(),cellFormat);
+        label = new Label(1, 35, jTextFieldKontrol7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,28,"Kaynak Yön.",cellFormat);
+        label = new Label(2, 28, "Kaynak Yön.", cellFormat);
         sheet.addCell(label);
-        label = new Label(2,29,jTextFieldKaynakYon1.getText(),cellFormat);
+        label = new Label(2, 29, jTextFieldKaynakYon1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,30,jTextFieldKaynakYon2.getText(),cellFormat);
+        label = new Label(2, 30, jTextFieldKaynakYon2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,31,jTextFieldKaynakYon3.getText(),cellFormat);
+        label = new Label(2, 31, jTextFieldKaynakYon3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,32,jTextFieldKaynakYon4.getText(),cellFormat);
+        label = new Label(2, 32, jTextFieldKaynakYon4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,33,jTextFieldKaynakYon5.getText(),cellFormat);
+        label = new Label(2, 33, jTextFieldKaynakYon5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,34,jTextFieldKaynakYon6.getText(),cellFormat);
+        label = new Label(2, 34, jTextFieldKaynakYon6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,35,jTextFieldKaynakYon7.getText(),cellFormat);
+        label = new Label(2, 35, jTextFieldKaynakYon7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,28,"Kalınlık",cellFormat);
+        label = new Label(3, 28, "Kalınlık", cellFormat);
         sheet.addCell(label);
-        label = new Label(3,29,jTextFieldKalinlik1.getText(),cellFormat);
+        label = new Label(3, 29, jTextFieldKalinlik1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,30,jTextFieldKalinlik2.getText(),cellFormat);
+        label = new Label(3, 30, jTextFieldKalinlik2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,31,jTextFieldKalinlik3.getText(),cellFormat);
+        label = new Label(3, 31, jTextFieldKalinlik3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,32,jTextFieldKalinlik4.getText(),cellFormat);
+        label = new Label(3, 32, jTextFieldKalinlik4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,33,jTextFieldKalinlik5.getText(),cellFormat);
+        label = new Label(3, 33, jTextFieldKalinlik5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,34,jTextFieldKalinlik6.getText(),cellFormat);
+        label = new Label(3, 34, jTextFieldKalinlik6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,35,jTextFieldKalinlik7.getText(),cellFormat);
+        label = new Label(3, 35, jTextFieldKalinlik7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,28,"Çap",cellFormat);
+        label = new Label(4, 28, "Çap", cellFormat);
         sheet.addCell(label);
-        label = new Label(4,29,jTextFieldCap1.getText(),cellFormat);
+        label = new Label(4, 29, jTextFieldCap1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,30,jTextFieldCap2.getText(),cellFormat);
+        label = new Label(4, 30, jTextFieldCap2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,31,jTextFieldCap3.getText(),cellFormat);
+        label = new Label(4, 31, jTextFieldCap3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,32,jTextFieldCap4.getText(),cellFormat);
+        label = new Label(4, 32, jTextFieldCap4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,33,jTextFieldCap5.getText(),cellFormat);
+        label = new Label(4, 33, jTextFieldCap5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,34,jTextFieldCap6.getText(),cellFormat);
+        label = new Label(4, 34, jTextFieldCap6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(4,35,jTextFieldCap7.getText(),cellFormat);
+        label = new Label(4, 35, jTextFieldCap7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,28,"Hata Tipi",cellFormat);
+        label = new Label(5, 28, "Hata Tipi", cellFormat);
         sheet.addCell(label);
-        label = new Label(5,29,jTextFieldHataTip1.getText(),cellFormat);
+        label = new Label(5, 29, jTextFieldHataTip1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,30,jTextFieldHataTip2.getText(),cellFormat);
+        label = new Label(5, 30, jTextFieldHataTip2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,31,jTextFieldHataTip3.getText(),cellFormat);
+        label = new Label(5, 31, jTextFieldHataTip3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,32,jTextFieldHataTip4.getText(),cellFormat);
+        label = new Label(5, 32, jTextFieldHataTip4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,33,jTextFieldHataTip5.getText(),cellFormat);
+        label = new Label(5, 33, jTextFieldHataTip5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,34,jTextFieldHataTip6.getText(),cellFormat);
+        label = new Label(5, 34, jTextFieldHataTip6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(5,35,jTextFieldHataTip7.getText(),cellFormat);
+        label = new Label(5, 35, jTextFieldHataTip7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,28,"Hatanın Yeri",cellFormat);
+        label = new Label(6, 28, "Hatanın Yeri", cellFormat);
         sheet.addCell(label);
-        label = new Label(6,29,jTextFieldHataYer1.getText(),cellFormat);
+        label = new Label(6, 29, jTextFieldHataYer1.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,30,jTextFieldHataYer2.getText(),cellFormat);
+        label = new Label(6, 30, jTextFieldHataYer2.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,31,jTextFieldHataYer3.getText(),cellFormat);
+        label = new Label(6, 31, jTextFieldHataYer3.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,32,jTextFieldHataYer4.getText(),cellFormat);
+        label = new Label(6, 32, jTextFieldHataYer4.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,33,jTextFieldHataYer5.getText(),cellFormat);
+        label = new Label(6, 33, jTextFieldHataYer5.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,34,jTextFieldHataYer6.getText(),cellFormat);
+        label = new Label(6, 34, jTextFieldHataYer6.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(6,35,jTextFieldHataYer7.getText(),cellFormat);
+        label = new Label(6, 35, jTextFieldHataYer7.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,28,"Sonuç",cellFormat);
+        label = new Label(7, 28, "Sonuç", cellFormat);
         sheet.addCell(label);
-        label = new Label(7,29,jComboBoxSonuc1.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 29, jComboBoxSonuc1.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,30,jComboBoxSonuc2.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 30, jComboBoxSonuc2.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,31,jComboBoxSonuc3.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 31, jComboBoxSonuc3.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,32,jComboBoxSonuc4.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 32, jComboBoxSonuc4.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,33,jComboBoxSonuc5.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 33, jComboBoxSonuc5.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,34,jComboBoxSonuc6.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 34, jComboBoxSonuc6.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(7,35,jComboBoxSonuc7.getSelectedItem().toString(),cellFormat);
+        label = new Label(7, 35, jComboBoxSonuc7.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(0,36,"Personel Bilgileri",cellFormat);
+        label = new Label(0, 36, "Personel Bilgileri", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,37,"Ad Soyad",cellFormat);
+        label = new Label(0, 37, "Ad Soyad", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,38,"Seviye",cellFormat);
+        label = new Label(0, 38, "Seviye", cellFormat);
         sheet.addCell(label);
-        label = new Label(0,39,"Tarih",cellFormat);
+        label = new Label(0, 39, "Tarih", cellFormat);
         sheet.addCell(label);
-        label = new Label(1,36,"Operatör",cellFormat);
+        label = new Label(1, 36, "Operatör", cellFormat);
         sheet.addCell(label);
-        label = new Label(1,37,jComboBoxOperatorAd.getSelectedItem().toString(),cellFormat);
+        label = new Label(1, 37, jComboBoxOperatorAd.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,38,jComboBoxOperatorSeviye.getSelectedItem().toString(),cellFormat);
+        label = new Label(1, 38, jComboBoxOperatorSeviye.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(1,39,jTextFieldOpTarih.getText(),cellFormat);
+        label = new Label(1, 39, jTextFieldOpTarih.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,36,"Değerlendiren",cellFormat);
+        label = new Label(2, 36, "Değerlendiren", cellFormat);
         sheet.addCell(label);
-        label = new Label(2,37,jComboBoxDegerlendirenAd.getSelectedItem().toString(),cellFormat);
+        label = new Label(2, 37, jComboBoxDegerlendirenAd.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,38,jComboBoxDegerlendirenSeviye.getSelectedItem().toString(),cellFormat);
+        label = new Label(2, 38, jComboBoxDegerlendirenSeviye.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,39,jTextFieldDegerlendirenTarih.getText(),cellFormat);
+        label = new Label(2, 39, jTextFieldDegerlendirenTarih.getText(), cellFormat);
         sheet.addCell(label);
-        label = new Label(3,36,"Onay",cellFormat);
+        label = new Label(3, 36, "Onay", cellFormat);
         sheet.addCell(label);
-        label = new Label(2,37,jComboBoxOnayAd.getSelectedItem().toString(),cellFormat);
+        label = new Label(2, 37, jComboBoxOnayAd.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,38,jComboBoxOnaySeviye.getSelectedItem().toString(),cellFormat);
+        label = new Label(2, 38, jComboBoxOnaySeviye.getSelectedItem().toString(), cellFormat);
         sheet.addCell(label);
-        label = new Label(2,39,jTextFieldOnayTarih.getText(),cellFormat);
+        label = new Label(2, 39, jTextFieldOnayTarih.getText(), cellFormat);
         sheet.addCell(label);
-        
+
         workbook.write();
         workbook.close();
     }
