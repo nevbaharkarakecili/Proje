@@ -662,7 +662,7 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="jComboBoxOperatorAd" pref="120" max="32767" attributes="0"/>
                                               <Component id="jComboBoxOperatorSeviye" max="32767" attributes="0"/>
-                                              <Component id="jTextField1" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldOpTarih" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1191,7 +1191,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel73" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldOpTarih" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextFieldDegerlendirenTarih" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextFieldOnayTarih" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2094,7 +2094,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExcelAktarActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
+                <Component class="javax.swing.JTextField" name="jTextFieldOpTarih">
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldDegerlendirenTarih">
                 </Component>
